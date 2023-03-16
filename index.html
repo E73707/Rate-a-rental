@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet.css" href="stylesheet.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @keyframes sway {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+  50% {
+    transform: rotate(5deg);
+    transform-origin: bottom center;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+}
+
+
+    #tree {
+        animation: sway 5s infinite;
+        height: 300px
+    }
+
+    .container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    }
+
+    .big-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .small-circle {
+    
+    border-radius: 50%;
+    background-color: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    #circle1 {
+        width: 30px;
+        height: 30px;
+    animation: orbit 10s linear infinite;
+    }
+
+    #circle2 {
+        width: 50px;
+        height: 50px;
+    animation: orbit 15s linear infinite;
+    }
+
+    #circle3 {
+        width: 75px;
+        height: 75px;
+    animation: orbit 20s linear infinite;
+    }
+
+    @keyframes orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+    }
+
+
+    </style>
+</head>
+<body>
+    <img id = "tree" src="/Screen Shot 2023-03-17 at 2 (1).png" alt="">
+    <div class="container">
+        <div class="big-circle"></div>
+        <div class="small-circle" id="circle1"></div>
+        <div class="small-circle" id="circle2"></div>
+        <div class="small-circle" id="circle3"></div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
