@@ -2,6 +2,10 @@ body {
   background-color: rgba(242, 244, 271, 1);
 }
 
+/* #body {
+  padding: auto;
+} */
+
 @keyframes sway {
   0% {
     transform: rotate(0deg);
@@ -25,7 +29,7 @@ body {
   animation: sway 8s infinite;
 }
 
-#tree3{
+#tree3 {
   animation: sway 6s infinite;
 }
 
@@ -254,7 +258,7 @@ ul {
 .body-main {
   width: 100%;
   position: absolute;
-  min-height: 800px
+  min-height: 800px;
 }
 
 @media screen and (max-width: 1160px) {
@@ -290,7 +294,6 @@ ul {
   min-height: 800px;
 }
 
-
 .main-body-wrapper {
   position: absolute;
   height: 740px;
@@ -307,7 +310,6 @@ ul {
   z-index: 20;
 }
 
-
 .main-illustration {
   position: relative;
   height: 100%;
@@ -322,7 +324,6 @@ ul {
   height: 20%;
   transform: translate(-50%, -50%);
 }
-
 
 .people-image {
   position: absolute;
@@ -341,11 +342,9 @@ ul {
   z-index: 6;
 }
 
-
-
 .custom-shape-divider-bottom-1679047371 {
   position: absolute;
-  bottom: 0;
+  bottom: 50;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -360,12 +359,12 @@ ul {
 }
 
 .custom-shape-divider-bottom-1679047371 .shape-fill {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .custom-shape-divider-top-1679048525 {
   position: absolute;
-  bottom: -100;
+  bottom: -50;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -381,10 +380,10 @@ ul {
 }
 
 .custom-shape-divider-top-1679048525 .shape-fill {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
-.tree-container{
+.tree-container {
   position: relative;
   top: 40%;
   left: 50%;
@@ -392,37 +391,40 @@ ul {
   z-index: 20;
 }
 
-.blue-trees{
-  position: relative;
+.blue-trees {
+  position: absolute;
+  top: 80%;
 }
 
-.tree{
- position: absolute;
- height: 200px;
- margin-top: 150px;
+.tree {
+  position: absolute;
+  height: 200px;
+  top: -220px;
+  /* margin-top: 150px; */
 }
 
-.tree-2{
+.tree-2 {
   position: absolute;
   height: 250px;
-  margin-top: 130px;
+  top: -220px;
   margin-left: 150px;
 }
 
-.tree-3{
+.tree-3 {
   position: absolute;
   height: 210px;
-  margin-top: 150px;
+  top: -200px;
   margin-left: 200px;
+  z-index: 200;
 }
-
 
 #text-bubble-1 {
   position: absolute;
   top: 17%;
   left: 60%;
   transform: translateX(-50%);
-  animation: fade-in 2s ease-in-out forwards, bobbing 1.5s ease-in-out infinite 2s;
+  animation: fade-in 2s ease-in-out forwards,
+    bobbing 1.5s ease-in-out infinite 2s;
   width: 100px;
 }
 
@@ -432,7 +434,8 @@ ul {
   top: 5%;
   left: 100%;
   transform: translateX(-50%);
-  animation: fade-in-2 2s ease-in-out forwards, bobbing 2s ease-in-out infinite 2s;
+  animation: fade-in-2 2s ease-in-out forwards,
+    bobbing 2s ease-in-out infinite 2s;
   width: 100px;
 }
 
@@ -447,7 +450,6 @@ ul {
   }
 }
 
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -460,7 +462,8 @@ ul {
 }
 
 @keyframes bobbing {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(-50%, -50%, 0);
   }
   50% {
@@ -475,11 +478,11 @@ ul {
   transform: translateY(-50%);
 }
 
-form{
+form {
   position: relative;
   top: 50%;
   left: calc(50%);
-  transform: translate(-100%,-50%);
+  transform: translate(-100%, -50%);
   transition: all 1s, top 1s;
   width: 50px;
   height: 50px;
@@ -490,11 +493,11 @@ form{
   padding: 5px;
 }
 
-input{
+input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;;
+  width: 100%;
   height: 42.5px;
   line-height: 30px;
   outline: 0;
@@ -505,7 +508,7 @@ input{
   padding: 0 20px;
 }
 
-.fa{
+.fa {
   box-sizing: border-box;
   padding: 10px;
   width: 42.5px;
@@ -545,20 +548,24 @@ form.expanded .fa {
   color: white;
 }
 
-
 a {
-display: none;
-position: absolute;
-top: 70px;
-bottom:0;
-left: 0;
-right: 0;
-font-size: 20px;
-color: white;
-text-align: center; 
-width: 100%;
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
 form:valid a {
-display: block;
+  display: block;
+}
+
+.svg-wrapper {
+  position: relative;
+  z-index: 3;
 }
